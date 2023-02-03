@@ -1,5 +1,7 @@
 import java.awt.*;
+import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
@@ -47,6 +49,25 @@ public class App {
         Math.ceil(1.1F);// outcome: 2.0
         Math.max(10, 20);
         System.out.println();
+
+        // Formatter
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String result2 = NumberFormat.getPercentInstance().format(0.1);
+        String result1 = currency.format(1234567.891);
+
+        System.out.println(result1);
+        System.out.println(result2);
+
+        // Reading input:
+        Scanner scanner = new Scanner(System.in);
+        // System.out.print("Age: ");
+        // byte age = scanner.nextByte();
+        // scanner.close();
+        // System.out.println("Your are " + age);
+
+        String name = scanner.nextLine().trim().toLowerCase();
+        scanner.close();
+        System.out.println("You are " + name);
 
     }
 }
